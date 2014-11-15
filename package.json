@@ -1,6 +1,6 @@
 {
   "name": "gl-vec3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "gl-matrix's vec3, split into smaller pieces",
   "main": "index.js",
   "license": {
