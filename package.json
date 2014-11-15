@@ -12,7 +12,9 @@
     "Colin MacKenzie IV <sinisterchipmunk@gmail.com>"
   ],
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "dox": "git://github.com/hughsk/dox#api-context"
+  },
   "scripts": {
     "get-docs": "cat *.js | dox --api"
   },
