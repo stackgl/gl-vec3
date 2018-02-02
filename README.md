@@ -174,7 +174,7 @@ var scale = require('gl-vec3/scale')
 
   Subtracts vector b from vector a
 
-## transformMat3(out:vec3, a:vec3, m:mat4)
+## transformMat3(out:vec3, a:vec3, m:mat3)
 
   Transforms the vec3 with a mat3.
 
