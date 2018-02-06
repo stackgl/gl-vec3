@@ -14,6 +14,12 @@ test('angle', function (t) {
   t.end()
 })
 
+test('ceil', function (t) {
+  var result = vec3.ceil([], [5.2, 6.5, 7.9])
+  t.deepEqual(result, [6, 7, 8])
+  t.end()
+})
+
 test('clone', function (t) {
   var result = vec3.clone([5, 6, 7])
   t.deepEqual(result, [5, 6, 7])
@@ -75,6 +81,12 @@ test('exactEquals', function (t) {
   t.notOk(vec3.exactEquals([3 + EPSILON, 5, 4], [3, 5, 4]))
   t.notOk(vec3.exactEquals([3, 5 + EPSILON, 4], [3, 5, 4]))
   t.notOk(vec3.exactEquals([3, 5, 4 + EPSILON], [3, 5, 4]))
+  t.end()
+})
+
+test('floor', function (t) {
+  var result = vec3.floor([], [5.2, 6.6, 7.9])
+  t.deepEqual(result, [5, 6, 7])
   t.end()
 })
 
@@ -201,6 +213,12 @@ test('scale', function (t) {
 test('scaleAndAdd', function (t) {
   var result = vec3.scaleAndAdd([], [3, 4, 5], [6, 7, 8], 2)
   t.deepEqual(result, [15, 18, 21])
+  t.end()
+})
+
+test('round', function (t) {
+  var result = vec3.round([], [5.2, 6.6, 8.5])
+  t.deepEqual(result, [5, 7, 9])
   t.end()
 })
 

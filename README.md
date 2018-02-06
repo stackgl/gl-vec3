@@ -28,6 +28,7 @@ var scale = require('gl-vec3/scale')
   - [add()](#addoutvec3avec3bvec3)
   - [angle()](#angleavec3bvec3)
   - [clone()](#cloneavec3)
+  - [ceil()](#ceiloutvec3-avec3)
   - [copy()](#copyoutvec3avec3)
   - [create()](#create)
   - [cross()](#crossoutvec3avec3bvec3)
@@ -38,6 +39,7 @@ var scale = require('gl-vec3/scale')
   - [dot()](#dotavec3bvec3)
   - [equals()](#equalsavec3-bvec3)
   - [exactEquals()](#exactequalsavec3-bvec3)
+  - [floor()](#flooroutvec3-avec3)
   - [forEach()](#foreachaarraystridenumberoffsetnumbercountnumberfnfunctionargobject)
   - [fromValues()](#fromvaluesxnumberynumberznumber)
   - [inverse()](#inverseoutvec3avec3)
@@ -54,6 +56,7 @@ var scale = require('gl-vec3/scale')
   - [rotateX()](#rotatexoutvec3avec3bvec3cnumber)
   - [rotateY()](#rotateyoutvec3avec3bvec3cnumber)
   - [rotateZ()](#rotatezoutvec3avec3bvec3cnumber)
+  - [round()](#roundoutvec3-avec3)
   - [scale()](#scaleoutvec3avec3bnumber)
   - [scaleAndAdd()](#scaleandaddoutvec3avec3bvec3scalenumber)
   - [set()](#setoutvec3xnumberynumberznumber)
@@ -74,6 +77,10 @@ var scale = require('gl-vec3/scale')
 ## angle(a:vec3, b:vec3)
 
   Get the angle between two 3D vectors
+
+## ceil(out:vec3, a:vec3)
+
+  `Math.ceil` the components of a vec3
 
 ## clone(a:vec3)
 
@@ -106,6 +113,10 @@ var scale = require('gl-vec3/scale')
 ## equals(a:vec3, b:vec3)
 
   Returns whether or not the vectors have approximately the same elements in the same position.
+
+## floor(out:vec3, a:vec3)
+
+  `Math.floor` the components of a vec3
 
 ## exactEquals(a:vec3, b:vec3)
 
@@ -166,6 +177,10 @@ var scale = require('gl-vec3/scale')
 ## rotateZ(out:vec3, a:vec3, b:vec3, c:Number)
 
   Rotate a 3D vector around the z-axis
+
+## round(out:vec3, a:vec3)
+
+  `Math.round` the components of a vec3
 
 ## scale(out:vec3, a:vec3, b:Number)
 
