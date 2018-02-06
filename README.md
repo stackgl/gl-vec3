@@ -36,6 +36,8 @@ var scale = require('gl-vec3/scale')
   - [divide()](#divideoutvec3avec3bvec3)
   - [div()](#divideoutvec3avec3bvec3)
   - [dot()](#dotavec3bvec3)
+  - [equals()](#equalsavec3-bvec3)
+  - [exactEquals()](#exactequalsavec3-bvec3)
   - [forEach()](#foreachaarraystridenumberoffsetnumbercountnumberfnfunctionargobject)
   - [fromValues()](#fromvaluesxnumberynumberznumber)
   - [inverse()](#inverseoutvec3avec3)
@@ -100,6 +102,14 @@ var scale = require('gl-vec3/scale')
 ## dot(a:vec3, b:vec3)
 
   Calculates the dot product of two vec3's
+
+## equals(a:vec3, b:vec3)
+
+  Returns whether or not the vectors have approximately the same elements in the same position.
+
+## exactEquals(a:vec3, b:vec3)
+
+  Returns whether or not the vectors exactly have the same elements in the same position (when compared with ===)
 
 ## forEach(a:Array, stride:Number, offset:Number, count:Number, fn:Function, [arg]:Object)
 

@@ -1,6 +1,6 @@
 var test = require('tape')
 var vec3 = require('../')
-var EPSILON = 0.000001
+var EPSILON = require('../epsilon')
 
 test('add', function (t) {
   var result = vec3.add([], [0, 1, 2], [3, 4, 5])
@@ -59,6 +59,22 @@ test('div', function (t) {
 test('dot', function (t) {
   var result = vec3.dot([3, 4, 5], [6, 7, 8])
   t.deepEqual(result, 86)
+  t.end()
+})
+
+test('equals', function (t) {
+  t.ok(vec3.equals([3 + EPSILON, 5 - EPSILON, 4 + EPSILON], [3, 5, 4]))
+  t.notOk(vec3.equals([3 + EPSILON * 10, 5, 4], [3, 5, 4]))
+  t.notOk(vec3.equals([3, 5 - EPSILON * 10, 4], [3, 5, 4]))
+  t.notOk(vec3.equals([3, 5, 4 + EPSILON * 10], [3, 5, 4]))
+  t.end()
+})
+
+test('exactEquals', function (t) {
+  t.ok(vec3.exactEquals([3, 5], [3, 5]))
+  t.notOk(vec3.exactEquals([3 + EPSILON, 5, 4], [3, 5, 4]))
+  t.notOk(vec3.exactEquals([3, 5 + EPSILON, 4], [3, 5, 4]))
+  t.notOk(vec3.exactEquals([3, 5, 4 + EPSILON], [3, 5, 4]))
   t.end()
 })
 
