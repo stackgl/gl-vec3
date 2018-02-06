@@ -50,6 +50,12 @@ test('divide', function (t) {
   t.end()
 })
 
+test('div', function (t) {
+  var result = vec3.div([], [8, 4, 2], [2, 1, 0.5])
+  t.deepEqual(result, [4, 4, 4])
+  t.end()
+})
+
 test('dot', function (t) {
   var result = vec3.dot([3, 4, 5], [6, 7, 8])
   t.deepEqual(result, 86)
@@ -93,6 +99,12 @@ test('length', function (t) {
   t.end()
 })
 
+test('len', function (t) {
+  var result = vec3.len([3, 4, 5])
+  t.ok(Math.abs(result - 7.0710678118654755) < EPSILON)
+  t.end()
+})
+
 test('lerp', function (t) {
   var result = vec3.lerp([], [3, 4, 5], [6, 7, 8], 0.25)
   t.deepEqual(result, [3.75, 4.75, 5.75])
@@ -113,6 +125,12 @@ test('min', function (t) {
 
 test('multiply', function (t) {
   var result = vec3.multiply([], [3, 4, 5], [6, 7, 8])
+  t.deepEqual(result, [18, 28, 40])
+  t.end()
+})
+
+test('mul', function (t) {
+  var result = vec3.mul([], [3, 4, 5], [6, 7, 8])
   t.deepEqual(result, [18, 28, 40])
   t.end()
 })
@@ -182,13 +200,31 @@ test('squaredDistance', function (t) {
   t.end()
 })
 
+test('sqrDist', function (t) {
+  var result = vec3.sqrDist([3, 4, 5], [6, 7, 8])
+  t.deepEqual(result, 27)
+  t.end()
+})
+
 test('squaredLength', function (t) {
   var result = vec3.squaredLength([3, 4, 5])
   t.deepEqual(result, 50)
   t.end()
 })
 
+test('sqrLen', function (t) {
+  var result = vec3.sqrLen([3, 4, 5])
+  t.deepEqual(result, 50)
+  t.end()
+})
+
 test('subtract', function (t) {
+  var result = vec3.subtract([], [3, 4, 5], [6, 7, 8])
+  t.deepEqual(result, [-3, -3, -3])
+  t.end()
+})
+
+test('sub', function (t) {
   var result = vec3.subtract([], [3, 4, 5], [6, 7, 8])
   t.deepEqual(result, [-3, -3, -3])
   t.end()
