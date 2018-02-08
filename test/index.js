@@ -83,7 +83,7 @@ test('equals', function (t) {
 })
 
 test('exactEquals', function (t) {
-  t.ok(vec3.exactEquals([3, 5], [3, 5]))
+  t.ok(vec3.exactEquals([3, 5, 4], [3, 5, 4]))
   t.notOk(vec3.exactEquals([3 + EPSILON, 5, 4], [3, 5, 4]))
   t.notOk(vec3.exactEquals([3, 5 + EPSILON, 4], [3, 5, 4]))
   t.notOk(vec3.exactEquals([3, 5, 4 + EPSILON], [3, 5, 4]))
