@@ -50,6 +50,12 @@ test('distance', function (t) {
   t.end()
 })
 
+test('dist', function (t) {
+  var result = vec3.dist([1, 2, 3], [4, 6, 7])
+  t.ok(Math.abs(result - 6.4031242374328485) < EPSILON)
+  t.end()
+})
+
 test('divide', function (t) {
   var result = vec3.divide([], [8, 4, 2], [2, 1, 0.5])
   t.deepEqual(result, [4, 4, 4])
