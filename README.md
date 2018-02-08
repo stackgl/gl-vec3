@@ -114,13 +114,13 @@ var scale = require('gl-vec3/scale')
 
   Returns whether or not the vectors have approximately the same elements in the same position.
 
-## floor(out:vec3, a:vec3)
-
-  `Math.floor` the components of a vec3
-
 ## exactEquals(a:vec3, b:vec3)
 
   Returns whether or not the vectors exactly have the same elements in the same position (when compared with ===)
+
+## floor(out:vec3, a:vec3)
+
+  `Math.floor` the components of a vec3
 
 ## forEach(a:Array, stride:Number, offset:Number, count:Number, fn:Function, [arg]:Object)
 
