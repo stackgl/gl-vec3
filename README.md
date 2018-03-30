@@ -28,32 +28,44 @@ var scale = require('gl-vec3/scale')
   - [add()](#addoutvec3avec3bvec3)
   - [angle()](#angleavec3bvec3)
   - [clone()](#cloneavec3)
+  - [ceil()](#ceiloutvec3-avec3)
   - [copy()](#copyoutvec3avec3)
   - [create()](#create)
   - [cross()](#crossoutvec3avec3bvec3)
   - [distance()](#distanceavec3bvec3)
+  - [dist()](#distanceavec3bvec3)
   - [divide()](#divideoutvec3avec3bvec3)
+  - [div()](#divideoutvec3avec3bvec3)
   - [dot()](#dotavec3bvec3)
+  - [equals()](#equalsavec3-bvec3)
+  - [exactEquals()](#exactequalsavec3-bvec3)
+  - [floor()](#flooroutvec3-avec3)
   - [forEach()](#foreachaarraystridenumberoffsetnumbercountnumberfnfunctionargobject)
   - [fromValues()](#fromvaluesxnumberynumberznumber)
   - [inverse()](#inverseoutvec3avec3)
   - [length()](#lengthavec3)
+  - [len()](#lengthavec3)
   - [lerp()](#lerpoutvec3avec3bvec3tnumber)
   - [max()](#maxoutvec3avec3bvec3)
   - [min()](#minoutvec3avec3bvec3)
   - [multiply()](#multiplyoutvec3avec3bvec3)
+  - [mul()](#multiplyoutvec3avec3bvec3)
   - [negate()](#negateoutvec3avec3)
   - [normalize()](#normalizeoutvec3avec3)
   - [random()](#randomoutvec3scalenumber)
   - [rotateX()](#rotatexoutvec3avec3bvec3cnumber)
   - [rotateY()](#rotateyoutvec3avec3bvec3cnumber)
   - [rotateZ()](#rotatezoutvec3avec3bvec3cnumber)
+  - [round()](#roundoutvec3-avec3)
   - [scale()](#scaleoutvec3avec3bnumber)
   - [scaleAndAdd()](#scaleandaddoutvec3avec3bvec3scalenumber)
   - [set()](#setoutvec3xnumberynumberznumber)
   - [squaredDistance()](#squareddistanceavec3bvec3)
+  - [sqrDist()](#squareddistanceavec3bvec3)
   - [squaredLength()](#squaredlengthavec3)
+  - [sqrLen()](#squaredlengthavec3)
   - [subtract()](#subtractoutvec3avec3bvec3)
+  - [sub()](#subtractoutvec3avec3bvec3)
   - [transformMat3()](#transformmat3outvec3avec3mmat4)
   - [transformMat4()](#transformmat4outvec3avec3mmat4)
   - [transformQuat()](#transformquatoutvec3avec3qquat)
@@ -65,6 +77,10 @@ var scale = require('gl-vec3/scale')
 ## angle(a:vec3, b:vec3)
 
   Get the angle between two 3D vectors
+
+## ceil(out:vec3, a:vec3)
+
+  `Math.ceil` the components of a vec3
 
 ## clone(a:vec3)
 
@@ -84,15 +100,27 @@ var scale = require('gl-vec3/scale')
 
 ## distance(a:vec3, b:vec3)
 
-  Calculates the euclidian distance between two vec3's
+  Calculates the euclidian distance between two vec3's. Aliased as `dist`
 
 ## divide(out:vec3, a:vec3, b:vec3)
 
-  Divides two vec3's
+  Divides two vec3's. Aliased as `div`
 
 ## dot(a:vec3, b:vec3)
 
   Calculates the dot product of two vec3's
+
+## equals(a:vec3, b:vec3)
+
+  Returns whether or not the vectors have approximately the same elements in the same position.
+
+## exactEquals(a:vec3, b:vec3)
+
+  Returns whether or not the vectors exactly have the same elements in the same position (when compared with ===)
+
+## floor(out:vec3, a:vec3)
+
+  `Math.floor` the components of a vec3
 
 ## forEach(a:Array, stride:Number, offset:Number, count:Number, fn:Function, [arg]:Object)
 
@@ -108,7 +136,7 @@ var scale = require('gl-vec3/scale')
 
 ## length(a:vec3)
 
-  Calculates the length of a vec3
+  Calculates the length of a vec3. Aliased as `len`
 
 ## lerp(out:vec3, a:vec3, b:vec3, t:Number)
 
@@ -124,7 +152,7 @@ var scale = require('gl-vec3/scale')
 
 ## multiply(out:vec3, a:vec3, b:vec3)
 
-  Multiplies two vec3's
+  Multiplies two vec3's. Aliased as `mul`
 
 ## negate(out:vec3, a:vec3)
 
@@ -150,6 +178,10 @@ var scale = require('gl-vec3/scale')
 
   Rotate a 3D vector around the z-axis
 
+## round(out:vec3, a:vec3)
+
+  `Math.round` the components of a vec3
+
 ## scale(out:vec3, a:vec3, b:Number)
 
   Scales a vec3 by a scalar number
@@ -164,15 +196,15 @@ var scale = require('gl-vec3/scale')
 
 ## squaredDistance(a:vec3, b:vec3)
 
-  Calculates the squared euclidian distance between two vec3's
+  Calculates the squared euclidian distance between two vec3's. Aliased as `sqrDist`
 
 ## squaredLength(a:vec3)
 
-  Calculates the squared length of a vec3
+  Calculates the squared length of a vec3. Aliased as `sqrLen`
 
 ## subtract(out:vec3, a:vec3, b:vec3)
 
-  Subtracts vector b from vector a
+  Subtracts vector b from vector a. Aliased as `sub`
 
 ## transformMat3(out:vec3, a:vec3, m:mat3)
 
