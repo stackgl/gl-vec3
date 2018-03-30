@@ -13,10 +13,12 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "dox": "git://github.com/hughsk/dox#api-context"
+    "dox": "git://github.com/hughsk/dox#api-context",
+    "tape": "^4.8.0"
   },
   "scripts": {
-    "get-docs": "cat *.js | dox --api"
+    "get-docs": "cat *.js | dox --api",
+    "test": "node test/index.js"
   },
   "keywords": [
     "gl-matrix",
