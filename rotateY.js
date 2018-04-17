@@ -9,21 +9,20 @@ module.exports = rotateY;
  * @returns {vec3} out
  */
 function rotateY(out, a, b, c){
-    var p = [], r=[]
-    //Translate point to the origin
-    p[0] = a[0] - b[0]
-    p[1] = a[1] - b[1]
-    p[2] = a[2] - b[2]
+    var bx = b[0]
+    var bz = b[2]
+
+    // translate point to the origin
+    var px = a[0] - bx
+    var pz = a[2] - bz
+    
+    var sc = Math.sin(c)
+    var cc = Math.cos(c)
   
-    //perform rotation
-    r[0] = p[2]*Math.sin(c) + p[0]*Math.cos(c)
-    r[1] = p[1]
-    r[2] = p[2]*Math.cos(c) - p[0]*Math.sin(c)
-  
-    //translate to correct position
-    out[0] = r[0] + b[0]
-    out[1] = r[1] + b[1]
-    out[2] = r[2] + b[2]
+    // perform rotation and translate to correct position
+    out[0] = bx + pz * sc + px * cc
+    out[1] = a[1]
+    out[2] = bz + pz * cc - px * sc
   
     return out
 }
