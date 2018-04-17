@@ -9,21 +9,20 @@ module.exports = rotateZ;
  * @returns {vec3} out
  */
 function rotateZ(out, a, b, c){
-    var p = [], r=[]
+    var bx = b[0]
+    var by = b[1]
+
     //Translate point to the origin
-    p[0] = a[0] - b[0]
-    p[1] = a[1] - b[1]
-    p[2] = a[2] - b[2]
+    var px = a[0] - bx
+    var py = a[1] - by
   
-    //perform rotation
-    r[0] = p[0]*Math.cos(c) - p[1]*Math.sin(c)
-    r[1] = p[0]*Math.sin(c) + p[1]*Math.cos(c)
-    r[2] = p[2]
-  
-    //translate to correct position
-    out[0] = r[0] + b[0]
-    out[1] = r[1] + b[1]
-    out[2] = r[2] + b[2]
+    var sc = Math.sin(c)
+    var cc = Math.cos(c)
+
+    // perform rotation and translate to correct position
+    out[0] = bx + px * cc - py * sc
+    out[1] = by + px * sc + py * cc
+    out[2] = a[2]
   
     return out
 }

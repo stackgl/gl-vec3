@@ -9,21 +9,20 @@ module.exports = rotateX;
  * @returns {vec3} out
  */
 function rotateX(out, a, b, c){
-    var p = [], r=[]
-    //Translate point to the origin
-    p[0] = a[0] - b[0]
-    p[1] = a[1] - b[1]
-    p[2] = a[2] - b[2]
+    var by = b[1]
+    var bz = b[2]
 
-    //perform rotation
-    r[0] = p[0]
-    r[1] = p[1]*Math.cos(c) - p[2]*Math.sin(c)
-    r[2] = p[1]*Math.sin(c) + p[2]*Math.cos(c)
+    // Translate point to the origin
+    var py = a[1] - by
+    var pz = a[2] - bz
 
-    //translate to correct position
-    out[0] = r[0] + b[0]
-    out[1] = r[1] + b[1]
-    out[2] = r[2] + b[2]
+    var sc = Math.sin(c)
+    var cc = Math.cos(c)
+
+    // perform rotation and translate to correct position
+    out[0] = a[0]
+    out[1] = by + py * cc - pz * sc
+    out[2] = bz + py * cc + pz * sc
 
     return out
 }
