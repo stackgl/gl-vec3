@@ -22,7 +22,7 @@ function rotateX(out, a, b, c){
     // perform rotation and translate to correct position
     out[0] = a[0]
     out[1] = by + py * cc - pz * sc
-    out[2] = bz + py * cc + pz * sc
+    out[2] = bz + py * sc + pz * cc
 
     return out
 }
