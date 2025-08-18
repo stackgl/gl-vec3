@@ -12,6 +12,9 @@ module.exports = transformQuat;
  * @returns {vec3} out
  */
 function transformQuat(out, a, q) {
+    // Fast Vector Rotation using Quaternions by Robert Eisele
+    // https://raw.org/proof/vector-rotation-using-quaternions/
+
     var x = a[0], y = a[1], z = a[2],
         qx = q[0], qy = q[1], qz = q[2], qw = q[3]
 
