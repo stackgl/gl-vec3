@@ -294,7 +294,15 @@ test('transformMat4', function (t) {
 })
 
 test('transformQuat', function (t) {
-  var result = vec3.transformQuat([], [3, 4, 5], [6, 7, 8, 9])
-  t.deepEqual(result, [882, 824, 1090])
+  // Construct unit quaternion q manually
+  const l = Math.sqrt(1 * 1 + 2 * 2 + 2 * 2 + 4 * 4)
+  const q = [1 / l, 2 / l, -2 / l, 4 / l]
+
+  var result = vec3.transformQuat([], [3, 4, 5], q)
+  t.deepEqual(result, [
+      6.6800000000000015,
+      -2.2400000000000007,
+      0.5999999999999992
+  ])
   t.end()
 })

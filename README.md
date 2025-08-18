@@ -217,7 +217,7 @@ var scale = require('gl-vec3/scale')
 
 ## transformQuat(out:vec3, a:vec3, q:quat)
 
-  Transforms the vec3 with a quat
+  Transforms the vec3 with a unit quat
 
 ## License
 
